@@ -1,0 +1,46 @@
+{
+  "name": "vikashmishra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@rpii/wdio-html-reporter": "^6.3.1",
+    "appium-doctor": "^1.16.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "delay": "^4.4.1",
+    "g": "^2.0.1",
+    "mocha": "^8.2.1",
+    "webdriverio": "^6.12.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@wdio/cli": "^6.12.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-istanbul": "^4.1.6",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^4.0.0",
+    "cucumber-html-reporter": "^4.0.2",
+    "protractor": "^5.4.1",
+    "protractor-beautiful-reporter": "^1.2.5",
+    "protractor-cucumber-framework": "^4.2.0",
+    "protractor-helper": "^3.6.14",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "app-test": "wdio ./config/wdio.app.config.js",
+    "test": "mocha screen --timeout 20000",
+    "report": "allure generate ./allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
