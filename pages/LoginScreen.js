@@ -1,11 +1,11 @@
-browser.waitUntil(function () {
-    const state = browser.execute(function () {
-      return document.readyState;
-    });
-    //console.log("state:" + state)
-    return state === 'complete';
+module.exports = {
+  login: () => {
+    return 'Jim';
   },
-    {
-      timeout: 60000, //60secs
-      timeoutMsg: 'Oops! Check your internet connection'
-    });
+
+  getLocation: () => {
+    return 'Munich';
+  },
+
+  dob: '12.01.1982',
+};

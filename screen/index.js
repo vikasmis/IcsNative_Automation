@@ -6,13 +6,13 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const expect = chai.expect;
+const LoginScreen = require('../pages/LoginScreen')
 
 const androidOptions = require('../helper/caps').androidOptions
 
-
 describe('Create Android session', async function () {
   let client;
-
+  console.log('m location',LoginScreen.login())
   it('it will click on login button', async function () {
     client = await driver.remote(androidOptions);
     console.log(client.getUrl())
@@ -57,7 +57,7 @@ describe('Create Android session', async function () {
     overviewpage.getText().then((textname) => {
       console.log('m loggedin ', textname)
     })
-    // })
+
     // await client.deleteSession();
   });
 });
