@@ -24,9 +24,9 @@ const DEFAULT_ANDROID_PLATFORM_VERSION = process.env.SAUCE ? '7.1' : null;
 const androidCaps = {
     platformName: "Android",
     deviceName: "S6G",
-    app: "/Users/vikashmishra/Desktop/ICSMOBAutomation/webdriverjsproject/qa.ics-nl.debug.apk",
-    appPackage: "com.ics.nl.icscardsgermany.qa",
-    appActivity: "com.ics.nl.icscardsgermany.qa.MainActivity",
+    // app: "/Users/vikashmishra/Desktop/ICSMOBAutomation/webdriverjsproject/qa.ics-nl.debug.apk",
+    appPackage: "com.ics.nl.icscardsgermany.local",
+    appActivity: "com.ics.nl.icscardsgermany.local.MainActivity",
     browserName: '',
     noReset: true
 };

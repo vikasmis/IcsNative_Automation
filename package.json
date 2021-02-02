@@ -12,6 +12,8 @@
     "delay": "^4.4.1",
     "g": "^2.0.1",
     "mocha": "^8.2.1",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.0.0-alpha.8",
     "webdriverio": "^6.12.1"
   },
   "devDependencies": {
@@ -32,12 +34,13 @@
     "protractor-beautiful-reporter": "^1.2.5",
     "protractor-cucumber-framework": "^4.2.0",
     "protractor-helper": "^3.6.14",
+    "selenium-appium": "^1.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
   "scripts": {
     "app-test": "wdio ./config/wdio.app.config.js",
-    "test": "mocha screen --timeout 20000",
+    "test": "mocha screen --timeout 25000",
     "report": "allure generate ./allure-results"
   },
   "keywords": [],
