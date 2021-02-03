@@ -22,7 +22,7 @@ describe('Create session for device-login', async function () {
     await client.deleteSession();
   });
 
-  xit('should show login and opdracht button', async function () {
+  it('should show login and opdracht button', async function () {
     client = await driver.remote(androidOptions);
     console.log(client.getUrl())
     await delay(3000)
