@@ -1,11 +1,11 @@
 module.exports = {
   login: () => {
-    return 'Jim';
+    return '';
   },
 
   getLocation: () => {
-    return 'Munich';
+    return '';
   },
 
-  dob: '12.01.1982',
+  loginButton: '$("android.widget.Button")',
 };
