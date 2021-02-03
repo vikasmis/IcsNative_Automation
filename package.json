@@ -40,7 +40,7 @@
   },
   "scripts": {
     "app-test": "wdio ./config/wdio.app.config.js",
-    "test": "mocha screen --timeout 25000",
+    "test": "mocha screen --timeout 30000",
     "report": "allure generate ./allure-results"
   },
   "keywords": [],

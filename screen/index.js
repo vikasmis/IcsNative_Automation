@@ -6,7 +6,8 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const expect = chai.expect;
-const LoginScreen = require('../pages/LoginScreen')
+const LoginScreen = require('../pages/LoginScreen');
+const { loginButton } = require("../pages/LoginScreen");
 
 const androidOptions = require('../helper/caps').androidOptions
 
@@ -21,7 +22,8 @@ describe('Create session for device-login', async function () {
     await client.deleteSession();
   });
 
-  it('should show login and opdracht button', async function () {
+  xit('should show login and opdracht button', async function () {
+    client = await driver.remote(androidOptions);
     console.log(client.getUrl())
     await delay(3000)
     const LoginButton = await client.$("android.widget.Button")
@@ -38,7 +40,8 @@ describe('Create session for device-login', async function () {
     })
   })
 
-  it('should show the overview page after login-sinle card', async function () {
+  it('should show the overview page after login-single card', async function () {
+    // client = await driver.remote(androidOptions);  // set this on to register the changes to WDIO
     console.log(client.getUrl())
     await delay(3000)
     const LoginButton = await client.$("android.widget.Button")
@@ -72,5 +75,11 @@ describe('Create session for device-login', async function () {
     overviewpage.getText().then((textname) => {
       console.log('m loggedin ', textname)
     })
+    await delay(5000)
+    const settingScreen = await client.$('//android.widget.Button[4]')
+    await settingScreen.click()
+    await delay(1000)
+    const logoutButton = await client.$("//android.widget.Button[@index='0']")
+    logoutButton.click()
   });
 });
