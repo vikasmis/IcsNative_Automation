@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">IcsNative_Automation</h1>
+          <h3 class="report-date">Thursday, February 4 2021, 03:17pm</h3>
+        </div>
+        <div class="nav-right">
+          <div class="quick-summary-cnt">
+              <ul class="list-unstyled quick-summary">
+                <li class="qs-item summary-duration" title="Duration">45.594<span>S</span></li>
+                <li class="qs-item summary-suites" title="Suites">1</li>
+                <li class="qs-item summary-tests" title="Tests">2</li>
+                <li class="qs-item summary-passes" title="Passed" data-filter="passed">2</li>
+                <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
+                <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+              </ul>          </div>
+          <button class="nav-menu-btn open-menu"><i class="icon-menu"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">45.594<span>S</span></h1>
+              <h4 class="summary-label">S</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct success">100% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="12a2a6f0-dc90-44c6-9de9-772e93c8ab80" class="suite has-tests has-passed">
+            <h3 class="suite-title">Execution on Android</h3>
+            <h5 class="suite-filename">/screen/login.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="12a2a6f0-dc90-44c6-9de9-772e93c8ab80" class="suite-chart" width="50" height="50" data-total-passes="2" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">23.617 s</li>
+                <li class="suite-summary-item tests">2</li>
+                <li class="suite-summary-item passed">2</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#12a2a6f0-dc90-44c6-9de9-772e93c8ab80-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="12a2a6f0-dc90-44c6-9de9-772e93c8ab80-test-list" class="list-group test-list collapse in">
+                    <div id="a0364c94-4d5c-4e68-ace6-902c30c64374" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              should show login and opdracht button
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a0364c94-4d5c-4e68-ace6-902c30c64374 > .test-logr.collapse">Log </button>
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a0364c94-4d5c-4e68-ace6-902c30c64374 > .test-code.collapse">Code </button>
+              <span class="test-duration slow">3.954 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<br>    <span class="hljs-comment">// client = await driver.remote(androidOptions);</span><br>    <span class="hljs-built_in">console</span>.log(client.getUrl());<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">3000</span>);<br>    <span class="hljs-keyword">const</span> LoginButton = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"android.widget.Button"</span>);<br>    <span class="hljs-keyword">const</span> opdrachtButton = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[2]"</span>);<br>    LoginButton.getText().then(text =&gt; {<br>      assert.equal(text, <span class="hljs-string">'Anmelden'</span>);<br>    });<br>    opdrachtButton.getText().then(text =&gt; {<br>      assert.equal(text, <span class="hljs-string">'Vorgang genehmigen'</span>);<br>    });</code></pre>
+          </div>
+        </div>            <div id="29759712-6353-4e1a-a3d9-a0070879f915" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              should show the overview page after login-single card
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#29759712-6353-4e1a-a3d9-a0070879f915 > .test-logr.collapse">Log </button>
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#29759712-6353-4e1a-a3d9-a0070879f915 > .test-code.collapse">Code </button>
+              <span class="test-duration slow">19.663 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<br>    <span class="hljs-comment">// client = await driver.remote(androidOptions);  // set this on to register the changes to WDIO</span><br>    <span class="hljs-built_in">console</span>.log(client.getUrl());<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">3000</span>);<br>    <span class="hljs-keyword">const</span> LoginButton = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"android.widget.Button"</span>);<br>    <span class="hljs-keyword">await</span> LoginButton.click();<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">3000</span>);<br>    <span class="hljs-keyword">const</span> setPinScreen = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.view.View[3]"</span>);<br>    setPinScreen.getText().then(text =&gt; {<br>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Set pin 5'</span>, text);<br>    });<br>    <span class="hljs-keyword">const</span> zugangscodeButton = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"android.widget.Button"</span>);<br>    zugangscodeButton.getText().then(text =&gt; {<br>      assert.equal(text, <span class="hljs-string">'Zugangscode eingeben'</span>);<br>    }); <span class="hljs-comment">// move to &lt;locator.js&gt; and call as one</span><br>    <span class="hljs-keyword">let</span> key1 = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    <span class="hljs-keyword">await</span> key1.click();<br>    <span class="hljs-keyword">let</span> key12 = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    <span class="hljs-keyword">await</span> key12.click();<br>    <span class="hljs-keyword">let</span> key13 = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    <span class="hljs-keyword">await</span> key13.click();<br>    <span class="hljs-keyword">let</span> key14 = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    <span class="hljs-keyword">await</span> key14.click();<br>    <span class="hljs-keyword">let</span> key15 = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    <span class="hljs-keyword">await</span> key15.click();<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">3000</span>);<br>    <span class="hljs-keyword">const</span> overviewpage = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">'//android.widget.Button[1]'</span>);<br>    overviewpage.getText().then(textname =&gt; {<br>      assert.equal(textname, Übersicht);<br>    });<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">1000</span>);<br>    <span class="hljs-keyword">const</span> settingScreen = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">'//android.widget.Button[4]'</span>);<br>    <span class="hljs-keyword">await</span> settingScreen.click();<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">1000</span>);<br>    <span class="hljs-keyword">const</span> logoutButton = <span class="hljs-keyword">await</span> client.$(<span class="hljs-string">"//android.widget.Button[@index='0']"</span>);<br>    logoutButton.click();<br>    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">4000</span>);</code></pre>
+          </div>
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2021.</p>
+      </div>
+    </footer>
+
+    <!-- Nav Menu -->
+    <div class="nav-menu-wrap">
+      <div class="menu-overlay close-menu"></div>
+      <nav class="menu">
+        <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
+        <ul class="list-unstyled main-menu">
+                <li class="nav-menu-item">
+                <a href="#12a2a6f0-dc90-44c6-9de9-772e93c8ab80" class="nav-menu-item-link has-passes">Execution on Android</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>

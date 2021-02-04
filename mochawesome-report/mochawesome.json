@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T13:08:22.499Z",
+    "end": "2021-02-04T13:08:59.509Z",
+    "duration": 37010,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2acdcda-4793-4d1b-a399-76d9985f115d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b5d5dcd9-9def-4a51-b680-57f78f356c59",
+          "title": "Create session for device-login",
+          "fullFile": "/Users/vikashmishra/IcsNative_Automation/screen/login.js",
+          "file": "/screen/login.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Create session for device-login\"",
+              "fullTitle": "Create session for device-login \"before each\" hook in \"Create session for device-login\"",
+              "timedOut": false,
+              "duration": 6515,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "client = await driver.remote(androidOptions);",
+              "err": {},
+              "uuid": "d526f5c3-14a8-4460-b79d-98758c76ebcf",
+              "parentUUID": "b5d5dcd9-9def-4a51-b680-57f78f356c59",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Create session for device-login\"",
+              "fullTitle": "Create session for device-login \"after each\" hook in \"Create session for device-login\"",
+              "timedOut": false,
+              "duration": 166,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await client.deleteSession();",
+              "err": {},
+              "uuid": "1b1e003d-1283-4eb1-a9ce-371ccd88c50b",
+              "parentUUID": "b5d5dcd9-9def-4a51-b680-57f78f356c59",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should show login and opdracht button",
+              "fullTitle": "Create session for device-login should show login and opdracht button",
+              "timedOut": false,
+              "duration": 3699,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// client = await driver.remote(androidOptions);\nconsole.log(client.getUrl())\nawait delay(3000)\nconst LoginButton = await client.$(\"android.widget.Button\")\nconst opdrachtButton = await client.$(\"//android.widget.Button[2]\")\nLoginButton.getText().then((text) => {\n  assert.equal(text, 'Anmelden')\n})\nopdrachtButton.getText().then((text) => {\n  assert.equal(text, 'Vorgang genehmigen')\n})",
+              "err": {},
+              "uuid": "400ba9ce-ee6b-4baf-a49c-3663e61c4ee1",
+              "parentUUID": "b5d5dcd9-9def-4a51-b680-57f78f356c59",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show the overview page after login-single card",
+              "fullTitle": "Create session for device-login should show the overview page after login-single card",
+              "timedOut": false,
+              "duration": 19402,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// client = await driver.remote(androidOptions);  // set this on to register the changes to WDIO\nconsole.log(client.getUrl())\nawait delay(3000)\nconst LoginButton = await client.$(\"android.widget.Button\")\nawait LoginButton.click()\nawait delay(3000)\nconst setPinScreen = await client.$(\"//android.view.View[3]\")\nsetPinScreen.getText().then((text) => {\n  console.log('Set pin 5', text)\n})\nconst zugangscodeButton = await client.$(\"android.widget.Button\")\nzugangscodeButton.getText().then((text) => {\n  assert.equal(text, 'Zugangscode eingeben')\n})\n// move to <locator.js> and call as one\nlet key1 = await client.$(\"//android.widget.Button[@index='0']\")\nawait key1.click()\nlet key12 = await client.$(\"//android.widget.Button[@index='0']\")\nawait key12.click()\nlet key13 = await client.$(\"//android.widget.Button[@index='0']\")\nawait key13.click()\nlet key14 = await client.$(\"//android.widget.Button[@index='0']\")\nawait key14.click()\nlet key15 = await client.$(\"//android.widget.Button[@index='0']\")\nawait key15.click()\nawait delay(3000)\nconst overviewpage = await client.$('//android.widget.Button[1]')\noverviewpage.getText().then((textname) => {\n  assert.equal(textname, Übersicht)\n})\nawait delay(1000)\nconst settingScreen = await client.$('//android.widget.Button[4]')\nawait settingScreen.click()\nawait delay(1000)\nconst logoutButton = await client.$(\"//android.widget.Button[@index='0']\")\nlogoutButton.click()\nawait delay(4000)",
+              "err": {},
+              "uuid": "05a75a6e-adc4-487d-95fa-30b03b1d0048",
+              "parentUUID": "b5d5dcd9-9def-4a51-b680-57f78f356c59",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "400ba9ce-ee6b-4baf-a49c-3663e61c4ee1",
+            "05a75a6e-adc4-487d-95fa-30b03b1d0048"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23101,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
