@@ -12,6 +12,8 @@
     "babel-register": "^6.26.0",
     "delay": "^4.4.1",
     "g": "^2.0.1",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
     "mochawesome": "^6.2.1",
     "mochawesome-screenshots": "^1.7.3",
     "selenium": "^2.20.0",

@@ -4,6 +4,8 @@ const driversel = require("selenium-appium")
 const { By, by } = require("protractor");
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
+const logReport = require('mochawesome-screenshots/logReport');
+// require('mochawesome-screenshots/logReport');
 chai.use(chaiAsPromised);
 import { aioPage } from '../pages/LoginScreen'
 const expect = chai.expect;
@@ -22,10 +24,12 @@ describe('Execution on Android', async function () {
   });
 
   it('should show login and opdracht button', async function () {
-    // client = await driver.remote(androidOptions);
-    console.log(aioPage.personalInformation.x)
+    // client = await driver.remote(androidOptions)
+    let x=aioPage.login
+    console.log(x)
     console.log(client.getUrl())
     await delay(3000)
+    // client.saveScreenshot("/Users/vikashmishra/IcsNative_Automation/text.png")
     const LoginButton = await client.$("android.widget.Button")
     const opdrachtButton = await client.$("//android.widget.Button[2]")
     LoginButton.getText().then((text) => {
@@ -35,8 +39,8 @@ describe('Execution on Android', async function () {
       assert.equal(text, 'Vorgang genehmigen')
     })
   })
-
-  it('should show the overview page after login-single card', async function () {
+  // driver.stopRecordingScreen(androidOptions)
+  xit('should show the overview page after login-single card', async function () {
     // client = await driver.remote(androidOptions);  // set this on to register the changes to WDIO
     console.log(client.getUrl())
     await delay(3000)
