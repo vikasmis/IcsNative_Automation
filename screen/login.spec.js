@@ -4,10 +4,10 @@ const driversel = require("selenium-appium")
 const { By, by } = require("protractor");
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const logReport = require('mochawesome-screenshots/logReport');
-// require('mochawesome-screenshots/logReport');
 chai.use(chaiAsPromised);
-import { aioPage } from '../pages/LoginScreen'
+
+import LoginScreen from '../pages/login.screen'
+import { DEFAULT_TIMEOUT } from '../helper/constants'
 const expect = chai.expect;
 const { assert } = require("chai");
 const androidOptions = require('../helper/caps').androidOptions
@@ -25,8 +25,6 @@ describe('Execution on Android', async function () {
 
   it('should show login and opdracht button', async function () {
     // client = await driver.remote(androidOptions)
-    let x=aioPage.login
-    console.log(x)
     console.log(client.getUrl())
     await delay(3000)
     // client.saveScreenshot("/Users/vikashmishra/IcsNative_Automation/text.png")
@@ -40,12 +38,10 @@ describe('Execution on Android', async function () {
     })
   })
   // driver.stopRecordingScreen(androidOptions)
-  xit('should show the overview page after login-single card', async function () {
+  it('should show the overview page after login-single card', async function () {
     // client = await driver.remote(androidOptions);  // set this on to register the changes to WDIO
     console.log(client.getUrl())
-    await delay(3000)
-    const LoginButton = await client.$("android.widget.Button")
-    await LoginButton.click()
+    await LoginScreen.loginButton.click()
     await delay(3000)
     const setPinScreen = await client.$("//android.view.View[3]")
     setPinScreen.getText().then((text) => {
@@ -55,19 +51,23 @@ describe('Execution on Android', async function () {
     zugangscodeButton.getText().then((text) => {
       assert.equal(text, 'Zugangscode eingeben')
     })
-
-    // move to <locator.js> and call as one
     let key1 = await client.$("//android.widget.Button[@index='0']")
+    await delay(1000)
     await key1.click()
-    let key12 = await client.$("//android.widget.Button[@index='0']")
-    await key12.click()
-    let key13 = await client.$("//android.widget.Button[@index='0']")
-    await key13.click()
-    let key14 = await client.$("//android.widget.Button[@index='0']")
-    await key14.click()
-    let key15 = await client.$("//android.widget.Button[@index='0']")
-    await key15.click()
-    await delay(3000)
+    // let key12 = await client.$("//android.widget.Button[@index='0']")
+    await delay(1000)
+    await key1.click()
+    // let key13 = await client.$("//android.widget.Button[@index='0']")
+    await delay(1000)
+    await key1.click()
+    // let key14 = await client.$("//android.widget.Button[@index='0']")
+    await delay(1000)
+    await key1.click()
+    // let key15 = await client.$("//android.widget.Button[@index='0']")
+    await delay(4000)
+    await key1.click()
+    await delay (1000)
+    await key1.click()
     const overviewpage = await client.$('//android.widget.Button[1]')
     overviewpage.getText().then((textname) => {
       assert.equal(textname, Übersicht)
